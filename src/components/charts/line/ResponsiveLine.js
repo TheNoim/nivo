@@ -11,8 +11,6 @@ import ResponsiveWrapper from '../ResponsiveWrapper'
 import Line from './Line'
 
 const ResponsiveLine = props =>
-    <ResponsiveWrapper>
-        {({ width, height }) => <Line width={width} height={height} {...props} />}
-    </ResponsiveWrapper>
+    <ResponsiveWrapper children={({ width, height }) => <Line width={width} height={height} {...props} />}/>
 
 export default ResponsiveLine
